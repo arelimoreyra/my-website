@@ -1,0 +1,107 @@
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white;
+  color: #87ceeb; /* baby blue */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Same elegant nav at top */
+.nav-center {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(135, 206, 235, 0.9); /* baby blue translucent */
+  padding: 15px 0;
+  z-index: 1000;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-center ul {
+  list-style: none;
+  display: inline-flex;
+  gap: 40px;
+}
+
+.nav-center ul li a {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-center ul li a:hover,
+.nav-center ul li a.active {
+  background-color: #b0e0ff;
+  color: #1a1a1a;
+}
+
+/* Main content container */
+main {
+  flex: 1;
+  margin-top: 70px; /* space for fixed nav */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.about-content {
+  max-width: 700px;
+  text-align: center;
+}
+
+/* Headings and paragraphs */
+.about-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Image row */
+.image-row {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.image-row img {
+  width: 150px;
+  height: auto;
+  border-radius: 15px; /* curved corners */
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.image-row img:hover {
+  transform: scale(1.05);
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+  padding: 15px 0;
+  background-color: #f0f8ff;
+  color: #87ceeb;
+  font-size: 0.9rem;
+}

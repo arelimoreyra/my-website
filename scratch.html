@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scratch</title>
+  <link rel="stylesheet" href="scratch.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="data.html">Data</a></li>
+        <li><a href="resume.html">Résumé</a></li>
+        <li><a href="scratch.html" class="active">Scratch</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Scratch Page</h1>
+
+    <!-- Surprise Button -->
+    <section class="surprise-section">
+      <button id="surprise-btn">🎁 Surprise</button>
+      <p id="surprise-message" style="display:none;">Here’s your surprise! 🎉</p>
+    </section>
+
+    <!-- Game: Change Letter Colors -->
+    <section class="game-section">
+      <p id="color-text">Click the button to see the letters change colors!</p>
+      <button id="color-btn">Change Colors</button>
+    </section>
+  </main>
+
+  <script>
+    // Surprise
+    document.getElementById('surprise-btn').addEventListener('click', function(){
+      const msg = document.getElementById('surprise-message');
+      msg.style.display = msg.style.display === 'none' ? 'block' : 'none';
+    });
+
+    // Change Letter Colors
+    document.getElementById('color-btn').addEventListener('click', function(){
+      const textElement = document.getElementById('color-text');
+      let text = textElement.textContent;
+      let newHTML = '';
+      for(let char of text){
+        let randomColor = `hsl(${Math.floor(Math.random()*360)}, 100%, 50%)`;
+        newHTML += `<span style="color:${randomColor}">${char}</span>`;
+      }
+      textElement.innerHTML = newHTML;
+    });
+  </script>
+</body>
+</html>

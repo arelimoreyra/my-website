@@ -1,0 +1,87 @@
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+/* Navigation centered on top */
+.nav-center {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(50, 40, 80, 0.7); /* translucent dark lilac */
+  padding: 15px 0;
+  z-index: 1000;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.nav-center ul {
+  list-style: none;
+  display: inline-flex;
+  gap: 40px;
+}
+
+.nav-center ul li a {
+  color: #d9d4f5;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-center ul li a:hover,
+.nav-center ul li a.active {
+  background-color: #b3a5e5;
+  color: #1f1c2c;
+}
+
+/* Landing hero with full background */
+.landing-hero {
+  position: relative;
+  height: 100vh;
+  background-image: url('landscape.jpeg'); /* Replace with your photo */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* Overlay to make text readable */
+.landing-hero .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(75, 63, 136, 0.6); /* translucent dark lilac */
+  z-index: 1;
+}
+
+/* Text container */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
+}
